@@ -7,5 +7,3 @@ teaser:
 header: no
 permalink: "/benchmarks/"
 ---
-
-This includes all performance numbers and memory numbers
