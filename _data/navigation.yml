@@ -1,0 +1,23 @@
+- title: "Home"
+  url: "/"
+  side: left
+
+- title: "PrivApprox Design"
+  url: "/design/"
+  side: left
+
+- title: "Micro-benchmarks"
+  url: "/benchmarks/"
+  side: left
+
+- title: "Case-Studies"
+  url: "/case-studies/"
+  side: left
+
+- title: "Proofs"
+  url: "/proofs/"
+  side: left
+
+- title: "Contact"
+  url: "/contact/"
+  side: right
