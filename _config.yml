@@ -17,7 +17,7 @@ slogan:
 description: 'Website about PrivApprox System'
 
 # The credits show up in the includes/_footer.html – It would be nice of you to leave a link to Phlow or Feeling Responsive as a thank you :)
-credits: '<p>Created based on <a href="http://phlow.github.io/feeling-responsive/">Feeling Responsive</a> (by <a href="http://phlow.de/">Phlow</a>).</p>'
+credits: '<p>Website template: <a href="http://phlow.github.io/feeling-responsive/">Feeling Responsive</a> designed by <a href="http://phlow.de/">Phlow</a>.</p>'
 
 # Main author of the website
 # See > authors.yml
