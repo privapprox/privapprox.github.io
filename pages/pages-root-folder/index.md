@@ -41,7 +41,7 @@ To answer this question: we describe the design, implementation and evaluation o
 <img class="t20" width="100%" src="{{ site.urlimg }}motivation.jpg" alt="System overview">
 </div>
 
-The key idea behind our approach is to marry two existing techniques together: namely, _sampling} (used in the context of approximate computing) and _randomized response_ (used in the context of privacy-preserving analytics). The resulting marriage is complementary---It achieves stronger privacy guarantees and also improved performance, a necessary ingredient for achieving low-latency stream analytics.
+The key idea behind our approach is to marry two existing techniques together: namely, _sampling_ (used in the context of approximate computing) and _randomized response_ (used in the context of privacy-preserving analytics). The resulting marriage is complementary---It achieves stronger privacy guarantees and also improved performance, a necessary ingredient for achieving low-latency stream analytics.
 </div>
 
 <div id="videoModal" class="reveal-modal large" data-reveal="">
