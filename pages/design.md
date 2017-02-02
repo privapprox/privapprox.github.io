@@ -91,7 +91,7 @@ $$
 \end{equation}
 $$
 
-It has been proven in~\cite{DBLP:journals/fttcs/DworkR14} that, the randomized response mechanism achieves $\epsilon$-differential privacy~\cite{differential-privacy}, where:
+It has been proven in _<a href="http://dl.acm.org/citation.cfm?id=2693053"> this work </a>_ that, the randomized response mechanism achieves _<a href="https://www.microsoft.com/en-us/research/publication/differential-privacy/">$\epsilon$-differential privacy </a>_, where:
 
 $$
 \begin{equation}
@@ -112,7 +112,7 @@ $$
 The reason is: if a truthful answer is "Yes", then with the probability of '$p + (1 - p) \times q$', the randomized answer will still remain "Yes". Otherwise, if a truthful answer is "No", then with the probability of '$(1 - p) \times q$', the randomized answer will become "Yes".
 
 ### Step III: Transmitting Answers via Proxies
-After producing randomized responses, clients transmit them to the aggregator via the proxies. To achieve anonymity and unlinkability of the clients against the aggregator and analyst, we utilize the One-Time Pad (OTP) encryption together with source rewriting, which has been proposed for anonymous communications [cite]. Under the assumptions that:
+After producing randomized responses, clients transmit them to the aggregator via the proxies. To achieve anonymity and unlinkability of the clients against the aggregator and analyst, we utilize the One-Time Pad (OTP) encryption together with source rewriting, which has been proposed for _<a href="http://dl.acm.org/citation.cfm?id=2486013">anonymous communications</a>_. Under the assumptions that:
 
 * at least two proxies are not colluding
 * the proxies don't collude with the aggregator, nor the analyst
