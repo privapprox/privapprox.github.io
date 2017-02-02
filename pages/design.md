@@ -33,10 +33,6 @@ The workflow of PrivApprox consists of two main processes: submitting queries an
 
 To perform statistical analysis over users’ private data streams, an analyst creates a query using the query model described in the <a href="https://arxiv.org/abs/1701.05403">technical report</a>. In particular, each query is signed by the analyst for non-repudiation and consists of the following fields:
 
-<script type="text/javascript"
-  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
 $$
 \begin{equation}
 \label{eq:query}
