@@ -6,6 +6,7 @@ subheadline:
 teaser:
 header: no
 permalink: "/design/"
+use_math: true
 ---
 
 <div class="row">
