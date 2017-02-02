@@ -19,16 +19,25 @@ use_math: true
 </div>
 </div><!-- /.medium-4.columns -->
 
-
-
 <div class="medium-8 medium-pull-4 columns" markdown="1">
+We describe the design of PrivApprox, a data analytics system for privacy-preserving stream processing. PrivApprox provides three properties: _(i)_ $$\underline{Privacy}$$: zero-knowledge privacy guarantees for users, a privacy bound tighter than the state-of-the-art differential privacy; _(ii)_ $$\underline{Utility}$$: an interface for data analysts to systematically explore the trade-offs  between the output accuracy (with error-estimation) and query execution budget; _(iii)_ $$\underline{Latency}$$: near real-time stream processing based on a scalable "synchronization-free"  distributed architecture.
+
+The key idea behind our approach is to marry two existing techniques together: namely, _sampling_ (used in the context of approximate computing) and _randomized response_ (used in the context of privacy-preserving analytics). The resulting marriage is complementary---It achieves stronger privacy guarantees and also improved performance, a necessary ingredient for achieving low-latency stream analytics.
+</div>
+
+<div class="medium-12 medium-pull-12 columns" markdown="1">
+<img class="t20" width="100%" src="{{ site.urlimg }}motivation.jpg" alt="System overview">
+</div>
+
+
+<div class="medium-12 medium-pull-12 columns" markdown="1">
 ## System Overview
 
 The workflow of PrivApprox consists of two main processes: submitting queries and answering queries. In the first phase, an analyst submits a query (along with the execution budget) to clients via the aggregator and proxies. In the second phase, the query is answered by the clients in the reverse direction.
 </div><!-- /.medium-8.columns -->
 
-<div class="medium-8 medium-pull-4 columns" markdown="1">
-<img class="t20" width="100%" src="{{ site.urlimg }}system-overview.png" alt="System overview">
+<div class="medium-12 medium-pull-12 columns" markdown="1">
+<img class="t20" width="80%" src="{{ site.urlimg }}system-overview.png" alt="System overview">
 </div>
 
 <div class="medium-12 medium-pull-12 columns" markdown="1">
