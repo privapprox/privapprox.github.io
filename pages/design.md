@@ -88,7 +88,7 @@ Suppose $A_y$ and $E_y$  are the actual and the estimated numbers of the origina
 $$
 \begin{equation}
 \label{eq:accuracyloss}
-\eta = \abs{ \dfrac{A_y - E_y}{A_y} }
+\eta = | \dfrac{A_y - E_y}{A_y} |
 \end{equation}
 $$
 
