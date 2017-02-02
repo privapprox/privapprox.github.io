@@ -30,7 +30,7 @@ url: 'https://privapprox.github.io'
 baseurl: ''
 
 #Add latex
-markdown: redcarpet
+markdown: maruku
 
 # This is for the editing function in _/includes/improve_content
 # Leave it empty if your site is not on GitHub/GitHub Pages
