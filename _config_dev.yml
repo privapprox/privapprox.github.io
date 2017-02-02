@@ -24,6 +24,3 @@ sass:
 
 # Disable when not in production
 google_analytics_tracking_id: false
-
-# Add latex
-markdown: redcarpet
