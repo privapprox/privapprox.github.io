@@ -27,9 +27,9 @@ We evaluate PrivApprox using a series of microbenchmarks. For all microbenchmark
 
 ### Effect of sampling and randomization parameters
 
-We first measure the effect of randomization parameters on the utility and privacy guarantee of the query results.  In particular, the utility is measured by the query result's accuracy loss _(<a href="https://privapprox.github.io/design/#step-ii-answering-queries-at-clients">Equation 3</a>)_, and privacy is measured by the level of achieved zero-knowledge privacy _(Theorem C.4. in the <a href="https://arxiv.org/abs/1701.05403">technical report</a>)_. For the experiment, we generated $10,000$ original answers randomly, 60\% of which are "Yes" answers.
+We first measure the effect of randomization parameters on the utility and privacy guarantee of the query results.  In particular, the utility is measured by the query result's accuracy loss _(<a href="https://privapprox.github.io/design/#step-ii-answering-queries-at-clients">Equation 3</a>)_, and privacy is measured by the level of achieved zero-knowledge privacy _(Theorem C.4. in the <a href="https://arxiv.org/abs/1701.05403">technical report</a>)_. For the experiment, we generated $10,000$ original answers randomly, 60% of which are "Yes" answers.
 
-_Table 1_ shows that different settings of the two randomization parameters, $p$ and $q$, do affect the utility and the privacy guarantee of the query results.  The higher $p$ means the higher probability that a client responds with its truthful answer.  As expected, this leads to higher utility (i.e., smaller accuracy loss $\eta$) but weaker privacy guarantee (i.e., higher privacy level $\epsilon$).  In addition, _Table 1_ also shows that the closer we set the probability $q$ to the fraction of truthful "Yes" answers (i.e., $60\%$ in this microbenchmark), the higher utility the query result provides. Nevertheless, to meet the utility and privacy requirements in various scenarios, we should carefully choose the appropriate $p$ and $q$.
+_Table 1_ shows that different settings of the two randomization parameters, $p$ and $q$, do affect the utility and the privacy guarantee of the query results.  The higher $p$ means the higher probability that a client responds with its truthful answer.  As expected, this leads to higher utility (i.e., smaller accuracy loss $\eta$) but weaker privacy guarantee (i.e., higher privacy level $\epsilon$).  In addition, _Table 1_ also shows that the closer we set the probability $q$ to the fraction of truthful "Yes" answers (i.e., $60%$ in this microbenchmark), the higher utility the query result provides. Nevertheless, to meet the utility and privacy requirements in various scenarios, we should carefully choose the appropriate $p$ and $q$.
 </div>
 
 <div class="medium-12 medium-pull-12 columns" markdown="1">
@@ -48,7 +48,7 @@ _Table 1_ shows that different settings of the two randomization parameters, $p$
 
 ***Table 1: Utility and privacy of query results with different randomization parameters $p$ and $q$.***
 
-We also measured the effect of sampling parameter on the accuracy loss. _Figure 1 (a)_ shows that the accuracy loss decreases with the increase in sampling fraction, regardless of the settings of randomization parameters $p$ and $q$.  The benefits reach diminishing returns after  $80\%$ sampling fraction.
+We also measured the effect of sampling parameter on the accuracy loss. _Figure 1 (a)_ shows that the accuracy loss decreases with the increase in sampling fraction, regardless of the settings of randomization parameters $p$ and $q$.  The benefits reach diminishing returns after  $80%$ sampling fraction.
 
 <div class="medium-12 medium-pull-12 columns" markdown="1">
  <img class="t20" width="100%" src="{{ site.urlimg }}micro-benchmark1.png" alt="micro-benchmarks">
@@ -58,21 +58,21 @@ We also measured the effect of sampling parameter on the accuracy loss. _Figure 
 
 ### Error estimation
 
-To analyze the accuracy loss, we first separately measured the accuracy loss caused by running, _individually_, the sampling  process and the randomized response process. For the comparison, secondly, we also computed the total accuracy loss after running the two processes in succession as in PrivApprox. For the experiment, we set he number of original answers to $10,000$ with $60\%$ of which being "Yes" answers. We compute the accuracy loss of the randomized response process separately by setting the sampling parameter to $100\%$ ($s = 1$) and the randomized response parameters $p$ and $q$ to $0.3$ and $0.6$, respectively. Meanwhile, we measure the accuracy loss of the sampling process without the randomized response process by setting $p$ to $1$.  
+To analyze the accuracy loss, we first separately measured the accuracy loss caused by running, _individually_, the sampling  process and the randomized response process. For the comparison, secondly, we also computed the total accuracy loss after running the two processes in succession as in PrivApprox. For the experiment, we set he number of original answers to $10,000$ with $60%$ of which being "Yes" answers. We compute the accuracy loss of the randomized response process separately by setting the sampling parameter to $100%$ ($s = 1$) and the randomized response parameters $p$ and $q$ to $0.3$ and $0.6$, respectively. Meanwhile, we measure the accuracy loss of the sampling process without the randomized response process by setting $p$ to $1$.  
 
 _Figure 1 (b)_ represents that the accuracy loss during the two experiments is statistically independent to each other. In addition, the accuracy loss of the two processes can effectively be added together to calculate the total accuracy loss.
 
 
 ### Effect of the number of clients
-We next analyzed how the number of participating clients affects the utility of the results.  For the experiment, we fix the sampling and randomization parameters $s$, $p$ and $q$ to $0.9$, $0.9$ and $0.6$, respectively, and set the fraction of truthful "Yes" answers to $60\%$.  
+We next analyzed how the number of participating clients affects the utility of the results.  For the experiment, we fix the sampling and randomization parameters $s$, $p$ and $q$ to $0.9$, $0.9$ and $0.6$, respectively, and set the fraction of truthful "Yes" answers to $60%$.  
 
 _Figure 1 (c)_ shows that the utility of query results improves with the increase in the number of participating clients, and few clients (e.g., $<100$) may lead to low-utility query results.
 
 ### Effect of the fraction of truthful answers
 We also measured the utility of both the native and the inverse query results with different fractions of truthful "Yes" answers.  For the experiment, we still keep the sampling and randomization parameters $s$, $p$ and $q$ to $0.9$, $0.9$ and $0.6$, respectively, and set the total number of answers to $10,000$.  
 
-_Figure 2 (a)_ shows that PrivApprox achieves higher utility as the fraction of truthful "Yes" answers gets closer to $60$\% (i.e., the $q$ value). In addition, when
-the fraction of "Yes" truthful answers $y$ is too small compared to the $q$ value (e.g., $y = 0.1$), the accuracy loss is ($2.54$\%). However, by using the query inversion mechanism _(see §3.3.3 in the <a href="https://arxiv.org/abs/1701.05403">technical report</a>)_, we can significantly reduce  the accuracy loss ($0.4$\%).
+_Figure 2 (a)_ shows that PrivApprox achieves higher utility as the fraction of truthful "Yes" answers gets closer to $60$% (i.e., the $q$ value). In addition, when
+the fraction of "Yes" truthful answers $y$ is too small compared to the $q$ value (e.g., $y = 0.1$), the accuracy loss is ($2.54$%). However, by using the query inversion mechanism _(see §3.3.3 in the <a href="https://arxiv.org/abs/1701.05403">technical report</a>)_, we can significantly reduce  the accuracy loss ($0.4$%).
 
 <div class="medium-12 medium-pull-12 columns" markdown="1">
  <img class="t20" width="100%" src="{{ site.urlimg }}micro-benchmark2.png" alt="micro-benchmarks">
