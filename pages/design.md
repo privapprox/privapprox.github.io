@@ -18,9 +18,7 @@ permalink: "/design/"
 </div>
 </div><!-- /.medium-4.columns -->
 
-<script type="text/javascript"
-  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+ {% include mathjax_support %}
 
 <div class="medium-8 medium-pull-4 columns" markdown="1">
 ## System Overview
