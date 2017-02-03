@@ -78,6 +78,8 @@ the fraction of "Yes" truthful answers $y$ is too small compared to the $q$ valu
  <img class="t20" width="100%" src="{{ site.urlimg }}micro-benchmark2.png" alt="micro-benchmarks">
 </div>
 
+***Figure 2: (a) Accuracy loss for the native and inverse query results with different fractions of truthful "Yes" answers. (b) Throughput of proxies with different bit-vector sizes for the query answer. (c) Average number of sampled data items after stratified sampling with different sampling fractions.***
+
 ### Effect of answer's bit-vector sizes
 
 We also measured the throughput at proxies with various sizes for the bit-vector of client answers _(<a href="https://privapprox.github.io/design/#submitting-queries">$A[n]$ </a>)_. We conducted this experiment with a $3$-node cluster. _Figure 2 (b)_ shows that the throughput, as expected, is inversely proportional to the answer's bit-vector sizes.
