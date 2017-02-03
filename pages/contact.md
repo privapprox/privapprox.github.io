@@ -15,7 +15,6 @@ For more information, questions, and comments, please contact us:
 * [Thorsten Strufe][6]
 
 For the sources, please visit [our code page][7].
-pressestelle@tu-dresden.de
 
 [1]: <mailto:do.le_quoc@tu-dresden.de>
 [2]: <mailto:martin.Beck1@tu-dresden.de>
