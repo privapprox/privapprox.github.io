@@ -15,12 +15,12 @@ For more information, questions, and comments, please contact us:
 * [Thorsten Strufe][6]
 
 For the sources, please visit [our code page][7].
+pressestelle@tu-dresden.de
 
-
-[1]: <do.le_quoc@tu-dresden.de>
-[2]: <martin.Beck1@tu-dresden.de>
-[3]: <pramod.bhatotia@ed.ac.uk>
-[4]: <ruichuan.chen@gmail.com>
-[5]: <christof.fetzer@tu-dresden.de>
-[6]: <thorsten.strufe@tu-dresden.de>
+[1]: <mailto:do.le_quoc@tu-dresden.de>
+[2]: <mailto:martin.Beck1@tu-dresden.de>
+[3]: <mailto:pramod.bhatotia@ed.ac.uk>
+[4]: <mailto:ruichuan.chen@gmail.com>
+[5]: <mailto:christof.fetzer@tu-dresden.de>
+[6]: <mailto:thorsten.strufe@tu-dresden.de>
 [7]: https://bitbucket.org/lequocdo/privapprox
