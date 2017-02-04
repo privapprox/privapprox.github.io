@@ -57,7 +57,7 @@ homepage: true
     <div style="text-align:center;">
         <a href="https://bitbucket.org/lequocdo/privapprox">
             <img class="t0" width="10%" src="/images/github-icon.png" alt="Source code">
-            <h6 style="text-align:center; margin: 0 0 0 0;">Source Code</h6>
+            <h6 style="text-align:center; margin: 0 0 0 0;">Source code</h6>
         </a>
     </div>
 
