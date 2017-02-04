@@ -17,20 +17,23 @@ homepage: true
 {% include mathjax_support %}
 
 
-<div class="medium-12 medium-pull-12 columns" markdown="1">
-## How to preserve users' _privacy_ while supporting _high-utility_ analytics for _low-latency_ stream processing?
+<div style="text-align:center;" class="medium-12 medium-pull-12 columns" markdown="1">
+## PrivApprox: Privacy-Preserving Stream Analytics
 </div>
 
 <!-- ##### [Read more in our tech report -- "Privacy Preserving Stream Analytics: The Marriage of Randomized Response and Approximate Computing" --](https://arxiv.org/abs/1701.05403) <a href="https://arxiv.org/abs/1701.05403v1.pdf"><img class="t0" width="3%" src="/images/report-icon.png" alt=""></a> <a href="https://bitbucket.org/lequocdo/privapprox"><img class="t0" width="3%" src="/images/github-icon.png" alt=""></a> -->
 
-<div class="medium-12 medium-pull-12 columns" markdown="1">
-##### Read more in our technical report -- "Privacy Preserving Stream Analytics: The Marriage of Randomized Response and Approximate Computing" -- <a href="https://arxiv.org/abs/1701.05403v1.pdf"><img class="t0" width="2.5%" src="/images/report-icon.png" alt=""></a> <a href="http://dblp.uni-trier.de/rec/bibtex/journals/corr/QuocBBCFS17"><img class="t0" width="2.5%" src="/images/bibtex-icon.png" alt=""></a> <a href="https://bitbucket.org/lequocdo/privapprox"><img class="t0" width="2.5%" src="/images/github-icon.png" alt=""></a>
+<div style="text-align:center;" class="medium-12 medium-pull-12 columns" markdown="1">
+<a href="https://arxiv.org/abs/1701.05403v1.pdf"><img class="t0" width="3%" src="/images/report-icon.png" alt=""></a> <a href="http://dblp.uni-trier.de/rec/bibtex/journals/corr/QuocBBCFS17"><img class="t0" width="3%" src="/images/bibtex-icon.png" alt=""></a> <a href="https://bitbucket.org/lequocdo/privapprox"><img class="t0" width="3%" src="/images/github-icon.png" alt=""></a>
 </div>
 
-----------
+
+<div class="medium-12 medium-pull-12 columns" markdown="1">
+##### How to preserve users' _privacy_ while supporting _high-utility_ analytics for _low-latency_ stream processing?
+</div>
 
 <div style="text-align:center;" class="medium-12 medium-pull-12 columns" markdown="1">
-<img class="t20" width="68%" src="{{ site.urlimg }}motivation.jpg" alt="System overview">
+<img class="t20" width="75%" src="{{ site.urlimg }}motivation.jpg" alt="System overview">
 </div>
 
 ----------  
