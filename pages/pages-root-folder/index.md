@@ -69,15 +69,19 @@ homepage: true
 </div> -->
 
 ----------
-<div class="medium-12 medium-pull-12 columns" markdown="1">
-##### How to preserve users' _privacy_ while supporting _high-utility_ analytics for _low-latency_ stream processing?
-</div>
+<!-- <div class="medium-12 medium-pull-12 columns" markdown="1"> -->
+<h2 style="text-align:center; margin-top: 0; margin-bottom: 1em; font-size: 1.2em;"> How to preserve users' <i>privacy</i> while supporting <i>high-utility</i> analytics for <i>low-latency</i> stream processing? </h2>
+
 
 <div style="text-align:center;" class="medium-12 medium-pull-12 columns" markdown="1">
 <img class="t20" width="68%" src="{{ site.urlimg }}motivation.jpg" alt="System overview">
 </div>
 
-----------  
+----------
+<h2 style="text-align:center; margin-top: 0; margin-bottom: 1em; font-size: 1.2em;">Looking for more information?</h2>
+<!-- <div class="medium-12 medium-pull-12 columns" markdown="1">
+#### Looking for more information?
+</div> -->
 
 <div class="row">
 <div class="large-3 columns" markdown="0">
