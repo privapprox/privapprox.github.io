@@ -1,2 +1,0 @@
-## PrivApprox website ##
-
