@@ -16,30 +16,71 @@ homepage: true
 
 {% include mathjax_support %}
 
+<div class="row">
+<div class="large-6 large-push-3 columns" markdown="0">
 
-<div style="text-align:center;" class="medium-12 medium-pull-12 columns" markdown="1">
-## PrivApprox: Privacy-Preserving Stream Analytics
+    <h1 id="privapprox" style="text-align:center; margin-bottom: 2pt;">PrivApprox</h1>
+    <h4 style="text-align:center; color: #333;">Privacy-Preserving Stream Analytics</h4>
+<br>
+
 </div>
+</div>
+
+<!-- <div style="text-align:center;" class="medium-12 medium-pull-12 columns" markdown="1">
+## PrivApprox: Privacy-Preserving Stream Analytics
+</div> -->
 
 <!-- ##### [Read more in our tech report -- "Privacy Preserving Stream Analytics: The Marriage of Randomized Response and Approximate Computing" --](https://arxiv.org/abs/1701.05403) <a href="https://arxiv.org/abs/1701.05403v1.pdf"><img class="t0" width="3%" src="/images/report-icon.png" alt=""></a> <a href="https://bitbucket.org/lequocdo/privapprox"><img class="t0" width="3%" src="/images/github-icon.png" alt=""></a> -->
 
-<div style="text-align:center;" class="medium-12 medium-pull-12 columns" markdown="1">
-<a href="https://arxiv.org/abs/1701.05403v1.pdf"><img class="t0" width="3%" src="/images/report-icon.png" alt=""></a> <a href="http://dblp.uni-trier.de/rec/bibtex/journals/corr/QuocBBCFS17"><img class="t0" width="3%" src="/images/bibtex-icon.png" alt=""></a> <a href="https://bitbucket.org/lequocdo/privapprox"><img class="t0" width="3%" src="/images/github-icon.png" alt=""></a>
+<div class="row">
+<div class="large-4 columns" markdown="0" display="inline;">
+    <div style="text-align:center;">
+        <a href="https://arxiv.org/abs/1701.05403v1.pdf">
+            <img class="t0" width="10%" src="/images/report-icon.png" alt="Technical report">
+            <h6 style="text-align:center; margin: 0 0 0 0;">Technical report</h6>
+        </a>
+    </div>    
+
+</div>    
+
+<div class="large-4 columns" markdown="0" display="inline;">
+    <div style="text-align:center;">
+        <a href="http://dblp.uni-trier.de/rec/bibtex/journals/corr/QuocBBCFS17">
+            <img class="t0" width="10%" src="/images/bibtex-icon.png" alt="Bibtex">
+            <h6 style="text-align:center; margin: 0 0 0 0;">BibTex</h6>
+        </a>
+   </div>      
 </div>
 
+<div class="large-4 columns" markdown="0" display="inline;">
 
+    <div style="text-align:center;">
+        <a href="https://bitbucket.org/lequocdo/privapprox">
+            <img class="t0" width="10%" src="/images/github-icon.png" alt="Source code">
+            <h6 style="text-align:center; margin: 0 0 0 0;">Source Code</h6>
+        </a>
+    </div>
+
+</div>    
+</div>
+
+<!-- <div style="text-align:center;" class="medium-12 medium-pull-12 columns" markdown="1">
+<a href="https://arxiv.org/abs/1701.05403v1.pdf"><img class="t0" width="3.6%" src="/images/report-icon.png" alt=""></a> <a href="http://dblp.uni-trier.de/rec/bibtex/journals/corr/QuocBBCFS17"><img class="t0" width="3.6%" src="/images/bibtex-icon.png" alt=""></a> <a href="https://bitbucket.org/lequocdo/privapprox"><img class="t0" width="3.6%" src="/images/github-icon.png" alt=""></a>
+</div> -->
+
+----------
 <div class="medium-12 medium-pull-12 columns" markdown="1">
 ##### How to preserve users' _privacy_ while supporting _high-utility_ analytics for _low-latency_ stream processing?
 </div>
 
 <div style="text-align:center;" class="medium-12 medium-pull-12 columns" markdown="1">
-<img class="t20" width="75%" src="{{ site.urlimg }}motivation.jpg" alt="System overview">
+<img class="t20" width="68%" src="{{ site.urlimg }}motivation.jpg" alt="System overview">
 </div>
 
 ----------  
 
 <div class="row">
-<div class="large-4 columns" markdown="0">
+<div class="large-3 columns" markdown="0">
 
     <div style="text-align:center;">
         <a href="/design/">
@@ -50,7 +91,7 @@ homepage: true
 
 </div>
 
-<div class="large-4 columns" markdown="0">
+<div class="large-3 columns" markdown="0">
 
     <div style="text-align:center;">
         <a href="/benchmarks/">
@@ -60,12 +101,22 @@ homepage: true
     </div>
 
 </div><!-- /.large-4.columns -->
-<div class="large-4 columns" markdown="0">
+<div class="large-3 columns" markdown="0">
 
     <div style="text-align:center;">
         <a href="/case-studies/">
             <img class="t0" width="50%" src="/images/casestudy-icon.png" alt="Case-study Evaluation">
             <h4 style="text-align:center; margin: 0 0 0 0;">Case-studies</h4>
+        </a>
+    </div>
+
+</div>
+<div class="large-3 columns" markdown="0">
+
+    <div style="text-align:center;">
+        <a href="/proofs/">
+            <img class="t0" width="50%" src="/images/proof-icon.png" alt="Proofs">
+            <h4 style="text-align:center; margin: 0 0 0 0;">Proofs</h4>
         </a>
     </div>
 
