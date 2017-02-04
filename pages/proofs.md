@@ -7,5 +7,7 @@ teaser:
 header: no
 permalink: "/proofs/"
 ---
+----------
 
-Under construction
+
+##### The privacy analysis and proofs are available [here](https://privapprox.github.io/docs/proofs.pdf) <a href="/docs/proofs.pdf"><img class="t0" width="3%" src="/images/report-icon.png" alt=""></a>
