@@ -17,9 +17,9 @@ For more information, questions, and comments, please contact us:
 For the sources, please visit [our code page][7].
 
 [1]: <mailto:do.le_quoc@tu-dresden.de>
-[2]: <mailto:martin.Beck1@tu-dresden.de>
-[3]: <mailto:pramod.bhatotia@ed.ac.uk>
-[4]: <mailto:ruichuan.chen@gmail.com>
-[5]: <mailto:christof.fetzer@tu-dresden.de>
-[6]: <mailto:thorsten.strufe@tu-dresden.de>
+[2]: <https://tu-dresden.de/ing/informatik/sya/ps/die-professur/beschaeftigte/mabe_de>
+[3]: <http://homepages.inf.ed.ac.uk/pbhatoti/>
+[4]: <http://www.ruichuan.org/>
+[5]: <https://tu-dresden.de/ing/informatik/sya/se/die-professur/inhaber-in>
+[6]: <https://tu-dresden.de/ing/informatik/sya/ps/die-professur/inhaber-in>
 [7]: https://bitbucket.org/lequocdo/privapprox
