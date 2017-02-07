@@ -36,8 +36,8 @@ homepage: true
 <div class="large-4 columns" markdown="0" display="inline;">
     <div style="text-align:center;">
         <a href="https://arxiv.org/abs/1701.05403v1.pdf">
-            <img class="t0" width="10%" src="/images/report-icon.png" alt="Technical report">
-            <h6 style="text-align:center; margin: 0 0 0 0;">Technical report</h6>
+            <img class="t0" width="8%" src="/images/report-icon.png" alt="Technical report">
+            <div style="text-align:center; margin: 0 0 0 0;">Technical report</div>
         </a>
     </div>    
 
@@ -46,8 +46,8 @@ homepage: true
 <div class="large-4 columns" markdown="0" display="inline;">
     <div style="text-align:center;">
         <a href="http://dblp.uni-trier.de/rec/bibtex/journals/corr/QuocBBCFS17">
-            <img class="t0" width="10%" src="/images/bibtex-icon.png" alt="Bibtex">
-            <h6 style="text-align:center; margin: 0 0 0 0;">BibTex</h6>
+            <img class="t0" width="8%" src="/images/bibtex-icon.png" alt="Bibtex">
+            <div style="text-align:center; margin: 0 0 0 0;">BibTex</div>
         </a>
    </div>      
 </div>
@@ -56,8 +56,8 @@ homepage: true
 
     <div style="text-align:center;">
         <a href="https://bitbucket.org/lequocdo/privapprox">
-            <img class="t0" width="10%" src="/images/github-icon.png" alt="Source code">
-            <h6 style="text-align:center; margin: 0 0 0 0;">Source code</h6>
+            <img class="t0" width="8%" src="/images/github-icon.png" alt="Source code">
+            <div style="text-align:center; margin: 0 0 0 0;">Source code</div>
         </a>
     </div>
 
