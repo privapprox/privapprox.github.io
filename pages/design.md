@@ -22,7 +22,7 @@ use_math: true
 <div class="medium-8 medium-pull-4 columns" markdown="1">
 We describe the design of PrivApprox, a data analytics system for privacy-preserving stream processing. PrivApprox provides three properties: _(i)_ $$\underline{Privacy}$$: zero-knowledge privacy guarantees for users, a privacy bound tighter than the state-of-the-art differential privacy; _(ii)_ $$\underline{Utility}$$: an interface for data analysts to systematically explore the trade-offs  between the output accuracy (with error-estimation) and query execution budget; _(iii)_ $$\underline{Latency}$$: near real-time stream processing based on a scalable "synchronization-free"  distributed architecture.
 
-The key idea behind our approach is to marry two existing techniques together: namely, _sampling_ (used in the context of approximate computing) and _randomized response_ (used in the context of privacy-preserving analytics). The resulting marriage is complementary---It achieves stronger privacy guarantees and also improved performance, a necessary ingredient for achieving low-latency stream analytics.
+The key idea behind our approach is to marry two existing techniques together: namely, _sampling_ (used in the context of approximate computing) and _randomized response_ (used in the context of privacy-preserving analytics). The resulting marriage is complementary ---it achieves stronger privacy guarantees and also improves performance, a necessary ingredient for achieving low-latency stream analytics.
 </div>
 
 <!-- <div class="medium-12 medium-pull-12 columns" markdown="1">
@@ -33,7 +33,9 @@ The key idea behind our approach is to marry two existing techniques together: n
 <div class="medium-12 medium-pull-12 columns" markdown="1">
 ## System Overview
 
-The workflow of PrivApprox consists of two main processes: submitting queries and answering queries. In the first phase, an analyst submits a query (along with the execution budget) to clients via the aggregator and proxies. In the second phase, the query is answered by the clients in the reverse direction.
+PrivApprox consists of two main phases: submitting queries and answering queries. In the first phase, an analyst submits a query (along with the execution
+budget) to clients via the aggregator and proxies. In the second phase, the query is answered by the clients in the reverse direction.
+
 </div><!-- /.medium-8.columns -->
 
 <div class="medium-12 medium-pull-12 columns" markdown="1">
@@ -45,7 +47,7 @@ The workflow of PrivApprox consists of two main processes: submitting queries an
 ## Submitting Queries
 {% include mathjax_support %}
 
-To perform statistical analysis over users’ private data streams, an analyst creates a query using the query model described in the <a href="https://arxiv.org/abs/1701.05403">technical report</a>. In particular, each query is signed by the analyst for non-repudiation and consists of the following fields:
+To perform statistical analysis over users' private data streams, an analyst creates a query using the query model described in the <a href="https://arxiv.org/abs/1701.05403">technical report</a>. In particular, each query consists of the following fields, and is signed by the analyst for nonrepudiation:
 
 $$
 \begin{equation}
@@ -69,7 +71,8 @@ After forming the query, the analyst sends the query, along with the query execu
 
 ## Answering Queries
 
-The query answering process involves several steps including (i) sampling at clients for approximation; (ii) randomizing answers for privacy preservation; (iii) transmitting answers for anonymization and unlinkability; and finally, (iv) aggregating answers with error estimation to give a confidence level on the approximate output. We next explain the entire workflow using these four steps.
+After receiving the query and system parameters, we next explain how the query is answered by clients and processed by the system to produce the result for the analyst.
+The query answering process involves several steps including _(i)_ sampling at clients for low-latency approximation, _(ii)_ randomizing answers for privacy preservation, _(iii)_ transmitting answers for anonymization and unlinkability; and finally, (iv) aggregating answers with error estimation to give a confidence level on the approximate output. We next explain the entire workflow using these four steps.
 
 <div class="medium-12 medium-pull-12 columns" markdown="1">
  <img class="t20" width="80%" src="{{ site.urlimg }}answer-query.png" alt="Answer query">
@@ -82,7 +85,7 @@ We make use of  approximate computation to achieve low-latency execution by comp
 ### Step II: Answering Queries at Clients
 Next, the clients that participate in the answering process make use of randomized response to preserve privacy.
 
-**Randomized response**. Randomized response protects user's privacy by allowing individuals to answer sensitive queries without providing truthful answers all the time, yet it allows analysts to collect statistical results. Randomized response works as follow: suppose an analyst sends a query to individuals to obtain statistical data about a sensitive property. To answer the query, a client locally randomizes its answer to the query. Specifically, the client flips a coin, if it comes up heads, then the client responds its truthful answer; otherwise, the client flips a second coin and responds "Yes" if it comes up heads or "No" if it comes up tails. The privacy is preserved via the ability to refuse responding truthful answers. Suppose that the probabilities of the first coin and the second coin coming up heads are $$p$$ and $$q$$, respectively. The analyst receives $$N$$ randomized answers from individuals, among which $$R_y$$ answers are "Yes". Then, the number of original truthful "Yes" answers before the randomization process can be estimated as:
+**Randomized response** Randomized response protects user's privacy by allowing individuals to answer sensitive queries without providing truthful answers all the time, yet it allows analysts to collect statistical results. Randomized response works as follow: suppose an analyst sends a query to individuals to obtain statistical result about a sensitive property. To answer the query, a client locally randomizes its answer to the query. Specifically, the client flips a coin, if it comes up heads, then the client responds its truthful answer; otherwise, the client flips a second coin and responds "Yes" if it comes up heads or "No" if it comes up tails. The privacy is preserved via the ability to refuse responding truthful answers. Suppose that the probabilities of the first coin and the second coin coming up heads are $$p$$ and $$q$$, respectively. The analyst receives $$N$$ randomized answers from individuals, among which $$R_y$$ answers are "Yes". Then, the number of original truthful "Yes" answers before the randomization process can be estimated as:
 
 $$
 \begin{equation}
@@ -119,6 +122,8 @@ $$
 $$
 
 The reason is: if a truthful answer is "Yes", then with the probability of '$p + (1 - p) \times q$', the randomized answer will still remain "Yes". Otherwise, if a truthful answer is "No", then with the probability of '$(1 - p) \times q$', the randomized answer will become "Yes".
+
+It is worth mentioning that, combining randomized response with the sampling technique used in Step I, we achieve not only differential privacy but also zero-knowledge privacy which is a privacy bound tighter than differential privacy. We prove our claim in _Theorem C.4. in the <a href="https://arxiv.org/abs/1701.05403">technical report</a>_.
 
 ### Step III: Transmitting Answers via Proxies
 After producing randomized responses, clients transmit them to the aggregator via the proxies. To achieve anonymity and unlinkability of the clients against the aggregator and analyst, we utilize the One-Time Pad (OTP) encryption together with source rewriting, which has been proposed for _<a href="http://dl.acm.org/citation.cfm?id=2486013">anonymous communications</a>_. Under the assumptions that:
@@ -178,5 +183,4 @@ Upon receiving the messages (either  $\langle M_{ID}, M_E \rangle$ or $\langle M
 At the aggregator, all data streams ($\langle M_{ID}, M_E \rangle$ and  $\langle M_{ID}, M_{K_i} \rangle$) are received, and can be joined together to obtain a unified data stream. Specifically, the associated $M_E$ and $M_{K_i}$ are paired by using a reduce operator with the common identifier $M_{ID}$. To rebuild the original randomized message $M$ from the client, the XOR function is performed over $M_E$ and $M_K$: $M = M_E \oplus M_K$ with $M_K$ being the XOR of all $M_{K_i}$: $M_K =
 \bigoplus_{i=2}^n M_{K_i}$. As the aggregator does not know which of the received messages is $M_E$, it just XORs all $n$ received messages to recover $M$.
 
-The joined answer stream is processed to produce the query results as a sliding window computation. For each window, the aggregator first adapts the computation window to the current start time $t$ by removing all old data items, with $timestamp < t$, from the window. Next, the aggregator adds the newly incoming data items into the window. Then, the answers in the window are decoded and aggregated to produce the query results for the analyst. Each query result is an estimated result which is bound to a range of error due to the approximation. The aggregator estimates this error bound and defines a confidence interval for the result as: $queryResult \pm errorBound$. The entire process is repeated for
-the next window, with the updated window parameters.
+The joined answer stream is processed to produce the query results as a sliding window computation. For each window, the aggregator first adapts the computation window to the current start time $t$ by removing all old data items, with $timestamp < t$, from the window. Next, the aggregator adds the newly incoming data items into the window. Then, the answers in the window are decoded and aggregated to produce the query results for the analyst. Each query result is an estimated result which is bound to a range of error due to the approximation. The aggregator estimates this error bound and defines a confidence interval for the result as: $queryResult \pm errorBound$. The entire process is repeated for the next window, with the updated window parameters.

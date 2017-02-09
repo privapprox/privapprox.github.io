@@ -27,9 +27,9 @@ We evaluate PrivApprox using a series of microbenchmarks. For all microbenchmark
 
 ### Effect of sampling and randomization parameters
 
-We first measure the effect of randomization parameters on the utility and privacy guarantee of the query results.  In particular, the utility is measured by the query result's accuracy loss _(<a href="https://privapprox.github.io/design/#step-ii-answering-queries-at-clients">Equation 3</a>)_, and privacy is measured by the level of achieved zero-knowledge privacy _(Theorem C.4. in the <a href="https://arxiv.org/abs/1701.05403">technical report</a>)_. For the experiment, we generated $10,000$ original answers randomly, 60% of which are "Yes" answers.
+We first measure the effect of randomization parameters on the utility and privacy guarantee of the query results.  In particular, the utility is measured by the query result's accuracy loss _(<a href="https://privapprox.github.io/design/#step-ii-answering-queries-at-clients">Equation 3</a>)_, and privacy is measured by the level of achieved zero-knowledge privacy _(Theorem C.4. in the <a href="https://arxiv.org/abs/1701.05403">technical report</a>)_. For the experiment, we generated $10,000$ original answers randomly, 60% of which are "Yes" answers. The sampling parameter $s$ is set to $0.6$.
 
-_Table 1_ shows that different settings of the two randomization parameters, $p$ and $q$, do affect the utility and the privacy guarantee of the query results.  The higher $p$ means the higher probability that a client responds with its truthful answer.  As expected, this leads to higher utility (i.e., smaller accuracy loss $\eta$) but weaker privacy guarantee (i.e., higher privacy level $\epsilon$).  In addition, _Table 1_ also shows that the closer we set the probability $q$ to the fraction of truthful "Yes" answers (i.e., $60%$ in this microbenchmark), the higher utility the query result provides. Nevertheless, to meet the utility and privacy requirements in various scenarios, we should carefully choose the appropriate $p$ and $q$.
+_Table 1_ shows that different settings of the two randomization parameters, $p$ and $q$, do affect the utility and the privacy guarantee of the query results.  The higher $p$ means the higher probability that a client responds with its truthful answer.  As expected, this leads to higher utility (i.e., smaller accuracy loss $\eta$) but weaker privacy guarantee (i.e., higher privacy level $\epsilon$).  In addition, _Table 1_ also shows that the closer we set the probability $q$ to the fraction of truthful "Yes" answers (i.e., $60%$ in this microbenchmark), the higher utility the query result provides. Nevertheless, to meet the utility and privacy requirements in various scenarios, we should carefully choose the appropriate $p$ and $q$. In practice, the selection of the $\epsilon$ value depends on real-world applications.
 </div>
 
 <div class="medium-12 medium-pull-12 columns" markdown="1">
@@ -123,3 +123,27 @@ _Table 3_ presents the throughput at clients. To further investigate the overhea
 |===================
 
 ***Table 3: Throughput (# operations/sec) at clients.***
+
+
+### Comparison with related work
+First, we compared PrivApprox with _<a href="http://dl.acm.org/citation.cfm?id=2486013">SplitX</a>_ , a high-performance privacy-preserving analytics system. We compare the latency incurred at proxies in both PrivApprox and SplitX. SplitX is geared towards batch analytics, but can be adapted to enable privacy-preserving data analytics over data streams.  We compare the latency incurred at proxies in both PrivApprox and SplitX.
+
+<div class="medium-12 medium-pull-12 columns" markdown="1" style="text-align:center;">
+ <img class="t20" width="50%" src="{{ site.urlimg }}splitx-comparison.png" alt="micro-benchmarks">
+
+ ***Figure 3: Latency comparison b/w SplitX and PrivApprox.***
+</div>
+
+
+_Figure 3_ shows that, with different numbers of clients, the latency incurred at proxies in PrivApprox is always nearly one order of magnitude lower than that in SplitX.  The reason is simple: unlike PrivApprox, SplitX requires synchronization among its proxies to process query answers in a privacy-preserving fashion.  This synchronization creates a significant delay in processing query answers, making SplitX unsuitable for dealing with large-scale stream analytics. More specifically, in SplitX, the processing at proxies consists of a few sub-processes including adding noise to answers, answer transmission, answer intersection, and answer shuffling; whereas, in PrivApprox, the processing at proxies contains only the answer transmission.  _Figure 3_ also shows that with $10^6$ clients, the latency at SplitX is $40.27$ sec, whereas PrivApprox achieves a latency of just $6.21$ sec, resulting in a $6.48\times$ speedup compared with SplitX.
+
+
+Next, we compared PrivApprox with a recent privacy-preserving analytics system called _<a href="http://dl.acm.org/citation.cfm?id=2660348">RAPPOR</a>_. Similar to PrivApprox, RAPPOR applies a randomized response mechanism to achieve differential privacy.  To make an "apple-to-apple" comparison between PrivApprox and RAPPOR in terms of privacy, we make a mapping between the system parameters of the two systems. We set the sampling parameter $s = 1$, and the randomized parameters $p = 1- f$, $q = 0.5$ in PrivApprox, where $f$ is the parameter used in the randomized response process of RAPPOR. In addition, we set the number of hash functions used in RAPPOR to $1$ ($h = 1$) for a fair comparison. In doing so, the two systems have the same randomized response process.  However, since PrivApprox makes use of the sampling mechanism before performing the randomized response process, PrivApprox achieves stronger privacy. _Figure 4_ shows the differential privacy level of RAPPOR and PrivApprox with different sampling fractions $s$.
+
+<div class="medium-12 medium-pull-12 columns" markdown="1" style="text-align:center;">
+ <img class="t20" width="50%" src="{{ site.urlimg }}rappor-comparison.png" alt="micro-benchmarks">
+
+ ***Figure 4: Differential privacy level comparison b/w RAPPOR and PrivApprox.***
+</div>
+
+It is worth mentioning that, by applying the sampling mechanism, PrivApprox achieves stronger privacy (i.e., zero\-/knowledge privacy) for clients. The comparison between differential privacy and zero-knowledge privacy is presented in _Theorem C.4. in the <a href="https://arxiv.org/abs/1701.05403">technical report</a>_.
