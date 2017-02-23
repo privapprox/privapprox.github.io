@@ -24,7 +24,7 @@ homepage: true
 
 <!-- <div class="row" style="margin: 0 0 0 0; text-align:center;"> -->
 <div class="large-2 large-push-3 columns" markdown="0" style="text-align:center;">
-        <a href="https://arxiv.org/abs/1701.05403v1.pdf">
+        <a href="https://arxiv.org/abs/1701.05403">
             <img class="t0" width="20%" src="/images/report-icon.png" alt="Technical report">
             <div style="text-align:center; margin: 0 0 0 0; font-size: 0.8em;">Technical report</div>
         </a>
