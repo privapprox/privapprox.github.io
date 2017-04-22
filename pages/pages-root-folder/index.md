@@ -106,3 +106,4 @@ homepage: true
 </div>
 ----------
 * Acknowledgements: _We would like to thank Amazon for their EC2 grant._
+* This work has been accepted to USENIX ATC'17, see you in Santa Clara, CA!
