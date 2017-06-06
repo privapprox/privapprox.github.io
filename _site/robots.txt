@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://privapprox.github.io/sitemap.xml
