@@ -38,7 +38,7 @@ homepage: true
         </a>
 </div>    
 <div class="large-1 large-push-4 columns" markdown="0" style="text-align:center;">
-        <a href="/docs/bib.tex">
+        <a href="/docs/bib.md">
             <img class="t0" width="40%" src="/images/bibtex-icon.png" alt="Bibtex">
             <div style="text-align:center; margin: 0 0 0 0; font-size: 0.8em;">BibTex</div>
         </a>   
