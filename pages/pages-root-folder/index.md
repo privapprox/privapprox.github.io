@@ -24,31 +24,45 @@ homepage: true
 
 <!-- <div class="row" style="margin: 0 0 0 0; text-align:center;"> -->
 <!-- <div class="row" style="text-align:center;"> -->
-<div class="large-1 large-push-4 columns" markdown="0" style="text-align:center;">
+
+
+<div class="large-1 medium-push-3 columns" markdown="0" style="text-align:center;position:relative;left:29%;right:auto;">
         <a href="/docs/atc17-final130.pdf">
             <img class="t0" width="40%" src="/images/usenix-icon.jpg" alt="USENIX ATC">
             <div style="text-align:center; margin: 0 0 0 0; font-size: 0.6em;">USENIX ATC'17</div>
         </a>
 </div>  
 
-<div class="large-1 large-push-4 columns" markdown="0" style="text-align:center;">
+<div class="large-1 medium-push-3 columns" markdown="0" style="text-align:center;position:relative;left:29%;right:auto;">
         <a href="https://arxiv.org/abs/1701.05403">
             <img class="t0" width="40%" src="/images/report-icon.png" alt="Technical report">
             <div style="text-align:center; margin: 0 0 0 0; font-size: 0.8em;">Technical report</div>
         </a>
-</div>    
-<div class="large-1 large-push-4 columns" markdown="0" style="text-align:center;">
+</div>  
+
+<div class="large-1 medium-push-3 columns" style="text-align:center;position:relative;left:29%;right:auto;">
+        <a href="/docs/privapprox-slides.pdf">
+            <img class="t0" width="45%" src="/images/pptx-icon.png" alt="Slides">
+            <div style="text-align:center; margin: 0 0 0 0; font-size: 0.8em;">Slides</div>
+        </a>
+</div>
+  
+<div class="large-1 medium-push-3 columns" markdown="0" style="text-align:center;position:relative;left:29%;right:auto;">
         <a href="/docs/bib.md">
             <img class="t0" width="40%" src="/images/bibtex-icon.png" alt="Bibtex">
             <div style="text-align:center; margin: 0 0 0 0; font-size: 0.8em;">BibTex</div>
         </a>   
 </div>
-<div class="large-1 large-push-4 columns" markdown="0" style="text-align:center;">
+
+<div class="large-1 medium-push-3 columns" markdown="0" style="text-align:center;position:relative;left:29%;right:auto;">
         <a href="https://bitbucket.org/lequocdo/privapprox">
             <img class="t0" width="40%" src="/images/github-icon.png" alt="Source code">
             <div style="text-align:center; margin: 0 0 0 0; font-size: 0.8em;">Source code</div>
         </a>
+
 </div>
+
+
 <!-- </div> -->
 
 
